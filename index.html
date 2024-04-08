@@ -8,36 +8,37 @@
 
     <title>responsive design</title>
     <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/styles.css">
 </head>
 <body>
-    <nav class="navigation">
-        <div class="logo">
-            <img src="images/Logo.png" alt="logo">
-        </div>
-        <ul class="navt">
-            <li><a href="Works">Works</a></li>
-            <li><a href="Services">Services</a></li>
-            <li><a href="Contacts">Contacts</a></li>
-            <div class="drpdown">
-                <button class="drpbtn">More
-                  <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="drpdown-cnt">
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
-                </div>
-              </div> 
-        </ul>
-    </nav>
+    <div class="nav" id="nav-bar">
+        <a href="home" class="active">Home</a>
+        <a href="news">News</a>
+        <a href="contact">Contact</a>
+        <a href="about">About</a>
+        <a class="icon" onclick="burgerMenu()">
+        <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <script>
+        function burgerMenu() {
+            let burger = document.getElementById("nav-bar");
+            if (burger.className === "nav") {
+            burger.className += " responsive";
+            } else {
+            burger.className = "nav";
+            }
+        }
+        </script>
+        
     
     <div class="mid">
     
         <div class="mn"><img src="images/Japan.png" alt="japan"></div>
    
         <div class="txt"> <p>Fusce vehicula dolor arcu, 
-        sit amet blandit dolor mollis nec.</p>  Donec viverra eleifend lacus, vitae ullamcor.</div>
+        sit amet blandit dolor mollis nec.</p> <p> Donec viverra eleifend lacus, vitae ullamcor.</p></div>
    
         <div class="imj"><img src="images/jpn.png" alt="mountain"></div>
     </div>
